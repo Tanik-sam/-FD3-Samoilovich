@@ -1,4 +1,4 @@
-﻿.iShop
+﻿.ishop
 {
   border: double gray 3px;
   width: 180px;
@@ -21,14 +21,14 @@
   padding-top: 5px;
 }
 
-.Ishop .Column
+.Ishop .ColumnN
 {
   float: right;
   width: 30px;
   font-weight: bold;
   text-align: right;
 }
-.Ishop .Row
+.Ishop .RowN
 {
   float: right;
   width: 30px;
