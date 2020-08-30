@@ -22,7 +22,10 @@
       var rowGood=this.props.rowG[a];
       var cGs=        
         React.DOM.div({key:rowG.codeGood,className:'Row'},
-          React.DOM.span({className:'RowN'},rowG.text)
+          React.DOM.span({className:'RowN'},rowG.nameGood),
+          React.DOM.span({className:'RowN'},rowG.priceGood),
+          React.DOM.span({className:'RowN'},rowG.urlGood),
+          React.DOM.span({className:'RowN'},rowG.quantityGood),
         )
         cG.push(cGs);
     }
