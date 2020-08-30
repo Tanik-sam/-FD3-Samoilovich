@@ -12,6 +12,7 @@
 }
 .ColumnName
 {
+  float:left;
   font-weight: bold;
   text-align: left;
 }
