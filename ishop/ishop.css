@@ -1,4 +1,4 @@
-﻿.VotesBlock
+﻿.iShop
 {
   border: double gray 3px;
   width: 180px;
@@ -6,30 +6,32 @@
   background-color: #F0F0F0;
 }
 
-.VotesBlock .Question
+.Ishop .MarketName
 {
   font-weight: bold;
 }
 
-.VotesBlock .Answers
+.Ishop .ColumnName
 {
   padding-top: 5px;
 }
 
-.VotesBlock .Answers .Answer
+.Ishop .Rowname
 {
-  padding: 2px 0;
+  padding-top: 5px;
 }
 
-.VotesBlock .Answers .Answer .Count
+.Ishop .Column. ColumnN 
 {
   float: right;
   width: 30px;
   font-weight: bold;
   text-align: right;
 }
-
-.VotesBlock .Answers .Answer .Text
+.Ishop .Row. RowN 
 {
-  margin-right: 30px;
+  float: right;
+  width: 30px;
+  font-weight: bold;
+  text-align: right;
 }

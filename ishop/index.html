@@ -15,9 +15,13 @@
 
   <script>
 
-    var questionText='Список товаров';
-    var goods=[{'nameGood':'чашка','priceGood':'2','urlGood':'src1','quantityGood':'20','codeGood':'1'},{'nameGood':'тарелка','priceGood':'3','urlGood':'src2','quantityGood':'10','codeGood':'2'},{'nameGood':'блюдо','priceGood':'5','urlGood':'src3','quantityGood':'15','codeGood':'3'}];
-    var answersArr=[ 
+    var marketNameText='Яблыка на талерке';
+    var goods=[
+      {nameGood:'чашка',priceGood:'2',urlGood:'src1',quantityGood:'20',codeGood:'1'},
+      {nameGood:'тарелка',priceGood:'3',urlGood:'src2',quantityGood:'10',codeGood:'2'},
+      {nameGood:'блюдо',priceGood:'5',urlGood:'src3',quantityGood:'15',codeGood:'3'}
+    ];
+    var columnGoods=[ 
       {text:'название',code:1}, 
       {text:'цена',code:2}, 
       {text:'URL фото',code:3},
@@ -25,7 +29,7 @@
     ];
 
     ReactDOM.render(
-      React.createElement(iShop,{question:questionText,answers:answersArr}), 
+      React.createElement(iShop,{marketName:marketNameText,rowG:goods,columnG:columnGoods}), 
       document.getElementById('container') 
     );
 

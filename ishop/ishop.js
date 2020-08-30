@@ -8,19 +8,29 @@
 
   render: function() {
 
-    var answersCode=[];
-    for ( var a=0; a<this.props.answers.length; a++ ) {
-      var answer=this.props.answers[a];
-      var answerCode=        
-        React.DOM.div({key:answer.code,className:'Answer'},
-          React.DOM.span({className:'Count'},answer.count),
-          React.DOM.span({className:'Text'},answer.text),
-        );
-      answersCode.push(answerCode);
+    var cG=[];
+    for ( var a=0; a<this.props.columnG.length; a++ ) {
+      var columnGood=this.props.columnG[a];
+      var cGs=        
+        React.DOM.div({key:columnG.code,className:'Column'},
+          React.DOM.span({className:'ColumnN'},columnG.text)
+        )
+        cG.push(cGs);
     }
+    var rG=[];
+    for ( var b=0; b<this.props.rowG.length; b++ ) {
+      var rowGood=this.props.rowG[a];
+      var cGs=        
+        React.DOM.div({key:rowG.codeGood,className:'Row'},
+          React.DOM.span({className:'RowN'},rowG.text)
+        )
+        cG.push(cGs);
+    }
+
     return React.DOM.div( {className:'iShop'}, 
-      React.DOM.div( {className:'Question'}, this.props.question ),
-      React.DOM.div( {className:'Answers'}, answersCode ),
+      React.DOM.div( {className:'MarketName'}, this.props.marketName ),
+      React.DOM.div( {className:'ColumnName'}, cG ),
+      React.DOM.div( {className: 'RowName'}, rG ),
     );
   },
 
