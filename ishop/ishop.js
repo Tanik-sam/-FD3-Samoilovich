@@ -7,11 +7,8 @@
     var cG=[];
     for ( var a=0; a<this.props.columnG.length; a++ ) {
       var columnGood=this.props.columnG[a];
-      var cGs=        
-        React.DOM.div({key:columnGood.code,className:'Column'},
-          React.DOM.span({className:'ColumnN'},columnGood.text)
-        )
-        cG.push(cGs);
+      var cGs=React.DOM.span({className:'ColumnN'},columnGood.text);
+      cG.push(cGs);
     }
     var rG=[];
     for ( var b=0; b<this.props.rowG.length; b++ ) {
