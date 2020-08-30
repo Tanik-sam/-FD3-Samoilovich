@@ -16,11 +16,12 @@
   <script>
 
     var questionText='Список товаров';
+    var goods=[{'nameGood':'чашка','priceGood':'2','urlGood':'src1','quantityGood':'20','codeGood':'1'},{'nameGood':'тарелка','priceGood':'3','urlGood':'src2','quantityGood':'10','codeGood':'2'},{'nameGood':'блюдо','priceGood':'5','urlGood':'src3','quantityGood':'15','codeGood':'3'}];
     var answersArr=[ 
-      {text:'название',code:1,count:222}, 
-      {text:'цена',code:2,count:123}, 
-      {text:'URL фото',code:3,count:444},
-      {text:'единиц на складе',code:4,count:444} 
+      {text:'название',code:1}, 
+      {text:'цена',code:2}, 
+      {text:'URL фото',code:3},
+      {text:'единиц на складе',code:4} 
     ];
 
     ReactDOM.render(
