@@ -10,23 +10,16 @@
   font-weight: bold;
   margin: 0px 10px 10px 10px;
 }
-.MarketName
-{
-  font-weight: bold;
-  margin: 0px 10px 10px 10px;
-}
 .ColumnName
 {
   font-weight: bold;
   text-align: left;
-  margin: 5px 5px 5px 5px;
 }
 .RowName
 {
   display:table-row;
   font-weight: bold;
   text-align: left;
-  margin: 5px 5px 5px 5px;
 }
 .ColumnName .ColumnN
 {
