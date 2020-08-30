@@ -2,10 +2,6 @@
 
   displayName: 'iShop',
 
-  getDefaultProps: function() {
-    return { question: "Вопрос ни о чём" }
-  },
-
   render: function() {
 
     var cG=[];
