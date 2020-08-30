@@ -23,6 +23,7 @@
 }
 .RowName
 {
+  display:table-row;
   font-weight: bold;
   text-align: left;
   margin: 0px 5px 5px 5px;
@@ -34,7 +35,6 @@
 }
 .RowName .RowN
 {
-  display:table-row;
   margin: 5px 5px 5px 5px;
   width: 30px;
 }
