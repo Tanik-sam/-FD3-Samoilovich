@@ -17,12 +17,14 @@
 }
 .ColumnName
 {
+  width: 600px;
   font-weight: bold;
   text-align: left;
-  margin: 0px 5px 5px 5px;
+  margin: 5px 5px 5px 5px;
 }
 .RowName
 {
+  width: 600px;
   display:table-row;
   font-weight: bold;
   text-align: left;
