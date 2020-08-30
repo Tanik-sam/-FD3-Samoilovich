@@ -18,16 +18,20 @@
 .ColumnName
 {
   font-weight: bold;
-  text-align: right;
+  text-align: left;
   margin: 0px 5px 5px 5px;
 }
 .RowName
 {
   font-weight: bold;
-  text-align: right;
+  text-align: left;
   margin: 0px 5px 5px 5px;
 }
-.ColumnName .RowN
+.ColumnName .ColumnN
 {
-  margin: 0px 5px 5px 5px;
+  margin: 5px 5px 5px 5px;
+}
+.RowName .RowN
+{
+  margin: 5px 5px 5px 5px;
 }
