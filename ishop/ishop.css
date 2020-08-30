@@ -1,4 +1,4 @@
-﻿.ishop
+﻿.iShop
 {
   border: double gray 3px;
   width: 180px;
@@ -6,29 +6,29 @@
   background-color: #F0F0F0;
 }
 
-.Ishop .MarketName
+.iShop .MarketName
 {
   font-weight: bold;
 }
 
-.Ishop .ColumnName
+.iShop .ColumnName
 {
   padding-top: 5px;
 }
 
-.Ishop .Rowname
+.iShop .Rowname
 {
   padding-top: 5px;
 }
 
-.Ishop .ColumnN
+.iShop .ColumnN
 {
   float: right;
   width: 30px;
   font-weight: bold;
   text-align: right;
 }
-.Ishop .RowN
+.iShop .RowN
 {
   float: right;
   width: 30px;
