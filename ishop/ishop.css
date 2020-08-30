@@ -17,15 +17,17 @@
 }
 .ColumnName
 {
-  width: 30px;
   font-weight: bold;
   text-align: right;
   margin: 0px 5px 5px 5px;
 }
 .RowName
 {
-  width: 30px;
   font-weight: bold;
   text-align: right;
+  margin: 0px 5px 5px 5px;
+}
+.ColumnName .RowN
+{
   margin: 0px 5px 5px 5px;
 }
