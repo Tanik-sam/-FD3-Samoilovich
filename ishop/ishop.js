@@ -7,7 +7,7 @@
     var cG=[];
     for ( var a=0; a<this.props.columnG.length; a++ ) {
       var columnGood=this.props.columnG[a];
-      var cGs=React.DOM.th({key:columnGood.code,className:'ColumnN'},columnGood.text);
+      var cGs=React.DOM.tbody({key:columnGood.code,className:'ColumnN'},columnGood.text);
       cG.push(cGs);
     }
     var rG=[];
