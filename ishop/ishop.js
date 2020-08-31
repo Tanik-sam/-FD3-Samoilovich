@@ -7,28 +7,31 @@
     var cG=[];
     for ( var a=0; a<this.props.columnG.length; a++ ) {
       var columnGood=this.props.columnG[a];
-      var cGs=React.DOM.span({key:columnGood.code,className:'ColumnN'},columnGood.text);
+      var cGs=React.DOM.th({key:columnGood.code,className:'ColumnN'},columnGood.text);
       cG.push(cGs);
     }
     var rG=[];
     for ( var b=0; b<this.props.rowG.length; b++ ) {
       var rowGood=this.props.rowG[b];
       var rGs=        
-        React.DOM.div({key:rowGood.codeGood,className:'Row'},
-          React.DOM.span({className:'RowN'},rowGood.nameGood),
-          React.DOM.span({className:'RowN'},rowGood.priceGood),
-          React.DOM.span({className:'RowN'},
-           React.DOM.img({className:'Img', src: rowGood.urlGood }),
+        React.DOM.tr({key:rowGood.codeGood,className:'Row'},
+          React.DOM.td({className:'RowN'},rowGood.nameGood),
+          React.DOM.td({className:'RowN'},rowGood.priceGood),
+          React.DOM.td({className:'RowN'},
+           React.DOM.img({className:'Img', src: rowGood.urlGood, width:150, height:150}),
            ),
-          React.DOM.span({className:'RowN'},rowGood.quantityGood),
+          React.DOM.td({className:'RowN'},rowGood.quantityGood),
         )
         rG.push(rGs);
     }
 
     return React.DOM.div( {className:'iShop'}, 
-      React.DOM.div( {className:'MarketName'}, this.props.marketName ),
-      React.DOM.div( {className:'ColumnName'}, cG ),
-      React.DOM.div( {className: 'RowName'}, rG ),
+      React.DOM.caption( {className:'MarketName'}, this.props.marketName ),
+      React.DOM.table(
+        React.DOM.tr( {className:'ColumnName'}, cG ),
+        React.DOM.tr( {className: 'RowName'}, rG ),
+        )
+      
     );
   },
 
