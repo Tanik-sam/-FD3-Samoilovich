@@ -27,7 +27,7 @@
 
     return React.DOM.div( {className:'iShop'}, 
       
-      React.DOM.table({className:'tableIshop',border:1}, 
+      React.DOM.table({className:'tableIshop'}, 
         React.DOM.caption( {className:'MarketName'}, this.props.marketName ),
         React.DOM.tr( {className:'ColumnName'}, cG ),
         rG,
