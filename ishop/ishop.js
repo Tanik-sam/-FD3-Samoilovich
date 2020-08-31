@@ -7,7 +7,7 @@
     var cG=[];
     for ( var a=0; a<this.props.columnG.length; a++ ) {
       var columnGood=this.props.columnG[a];
-      var cGs=React.DOM.tr({key:columnGood.code,className:'ColumnN'},columnGood.text);
+      var cGs=React.DOM.th({key:columnGood.code,className:'ColumnN'},columnGood.text);
       cG.push(cGs);
     }
     var rG=[];
@@ -28,7 +28,7 @@
       
       React.DOM.table({className:'tableIshop'}, 
         React.DOM.caption( {className:'MarketName'}, this.props.marketName ),
-        React.DOM.tbody( {className:'ColumnName'}, cG ),
+        React.DOM.tr( {className:'ColumnName'}, cG ),
         rG,
         )
       
