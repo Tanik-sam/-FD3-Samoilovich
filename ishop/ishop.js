@@ -26,10 +26,11 @@
     }
 
     return React.DOM.div( {className:'iShop'}, 
-      React.DOM.caption( {className:'MarketName'}, this.props.marketName ),
-      React.DOM.table(
+      
+      React.DOM.table({className:'tableIshop'}, 
+        React.DOM.caption( {className:'MarketName'}, this.props.marketName ),
         React.DOM.tr( {className:'ColumnName'}, cG ),
-        React.DOM.tr( {className: 'RowName'}, rG ),
+        rG,
         )
       
     );
