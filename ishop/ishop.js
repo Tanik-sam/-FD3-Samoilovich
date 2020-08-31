@@ -17,7 +17,9 @@
         React.DOM.div({key:rowGood.codeGood,className:'Row'},
           React.DOM.span({className:'RowN'},rowGood.nameGood),
           React.DOM.span({className:'RowN'},rowGood.priceGood),
-          React.DOM.span({className:'RowN'},rowGood.urlGood),
+          React.DOM.span({className:'RowN'},
+           React.DOM.img({className:'Img', src: rowGood.urlGood }),
+           ),
           React.DOM.span({className:'RowN'},rowGood.quantityGood),
         )
         rG.push(rGs);
