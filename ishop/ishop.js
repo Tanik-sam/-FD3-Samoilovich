@@ -28,9 +28,11 @@
       
       React.DOM.table({className:'tableIshop'}, 
         React.DOM.caption( {className:'MarketName'}, this.props.marketName ),
-        React.DOM.tr( {className:'ColumnName'}, cG ),
-        rG,
-        )
+        React.DOM.tbody( {className:'tableBody'}, 
+         React.DOM.tr( {className:'ColumnName'}, cG ),
+         rG,
+        ),
+      )
       
     );
   },
