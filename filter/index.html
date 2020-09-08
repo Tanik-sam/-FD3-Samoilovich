@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <meta charset="utf-8" />
+  <title>Фильтр</title>
+</head> 
+<body> 
+  <input type="checkbox" name="check1" value="a1">
+  <select size=5 name="words">
+  <div id="container"></div> 
+      
+  <script src="https://unpkg.com/react@15/dist/react.js"></script> 
+  <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script> 
+      
+  <script src="Filter.js"></script>
+  <link rel="stylesheet" type="text/css" href="Filter.css" />
+
+  <script>
+    var wordText='Введите термин';
+
+    function buildFilter() {
+
+      var wordsArr=[ 
+        {text:'неведанный',code:1}, 
+        {text:'негаданный',code:2},
+        {text:'нежеланный',code:3},
+        {text:'нежданный',code:4},
+        {text:'ненадёванный',code:5},
+        {text:'неожиданный',code:6},
+        {text:'неслыханный',code:7},
+        {text:'нечаянный',code:8},
+      ];
+
+      ReactDOM.render(
+        React.createElement(Filter,{word:wordText,wordsArray:wordsArr}), 
+        document.getElementById('container') 
+      );
+      
+    }
+
+    buildVotesBlock();
+
+    function changeQuestionText() {
+      questionText='Как вы относитесь к фигурному катанию?';
+      buildVotesBlock();
+    }
+
+  </script>
+
+</body> 
+</html>
