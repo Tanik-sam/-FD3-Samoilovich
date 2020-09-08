@@ -10,9 +10,7 @@ var Filter = React.createClass({
     render: function() {
       
           var wordsCode=this.props.wordsArray.map( v =>
-              React.DOM.div({key:v.code,className:'Words'},
-                React.DOM.span({className:'Count'},v.count),
-                React.DOM.span({className:'Text'},v.text),
+              React.DOM.select({key:v.code,className:'Word',v.text},
               )
             );
           return React.DOM.div( {className:'Filter'}, 
