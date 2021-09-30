@@ -13,13 +13,13 @@
 .ColumnName
 {
   font-weight: bold;
-  text-align: left;
+  text-align: center;
 }
 .RowName
 {
   display:table-row;
   font-weight: bold;
-  text-align: left;
+  text-align: center;
 }
 .ColumnName .ColumnN
 {
@@ -29,6 +29,12 @@
 .RowName .RowN
 {
   float:left;
+  margin: 5px 5px 5px 5px;
+  width: 80px;
+}
+.RowName .RowNN
+{
+  text-align:center;
   margin: 5px 5px 5px 5px;
   width: 80px;
 }

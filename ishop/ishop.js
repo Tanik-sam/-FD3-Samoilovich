@@ -20,7 +20,9 @@
           React.DOM.td({className:'RowN'},
            React.DOM.img({className:'Img', src: rowGood.urlGood, width:150, height:150}),
            ),
-          React.DOM.td({className:'RowN'},rowGood.quantityGood),
+          React.DOM.td({className:'RowN'},
+           React.DOM.span({className:'RowNN'},rowGood.quantityGood),
+          )
         )
         rG.push(rGs);
     }
