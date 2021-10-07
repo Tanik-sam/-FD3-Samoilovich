@@ -4,7 +4,7 @@ var InputTextBuild = React.createClass({
 
     propTypes: {
       wordsArray: React.PropTypes.array.isRequired,
-      cbNewText: React.PropsTypes.func,
+     // cbNewText: React.PropsTypes.func,
      },
     getInitialState: function() {
       return { 
@@ -22,9 +22,8 @@ var InputTextBuild = React.createClass({
        }
   var wordsArray1=this.props.wordsArray.filter(ff);
   this.setState( {listArray:wordsArray1} );
-  this.props.cbNewText(this.props.listArray);
+  this.props.cbNewText(this.props.wordsArray.filter(ff));//;this.props.listArray);
   console.log (wordsArray1.map(v=>"элемент "+v.code+" "+v.text))
-  return;
   },
     
 
