@@ -28,14 +28,14 @@ var SelectionBuild = React.createClass({
       console.log (newArr.map(v=>"элемент "+v.code+" "+v.text))
       this.setState( {listArray:newArr},gg() );
 
-      function gg(){ console.log (listArray.map(v=>'элемент'+ v.text))}
+      function gg(){ console.log ('reкуку')}
     
 
 return;
    },
     render: function() {
  
-          var wordsSelection=this.props.wordsArray.map( v =>
+          var wordsSelection=this.listArray.map( v =>
               React.DOM.option({key:v.code,className:'Word'},v.text,
               )
             );
