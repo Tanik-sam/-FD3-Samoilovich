@@ -10,11 +10,26 @@ var SelectionBuild = React.createClass({
       var makeReset=12;
       console.log (makeReset);
       },
+      getInitialState: function() {
+        return { 
+               listArray:this.props.wordsArray,
+               }
+      },
+      inputTextChanged: function(EO)
+      {
+           var x=EO.target.value;   
+           function ff(v,i,a)
+           {
+           console.log (v.text.indexOf(x))
+           return v.text.indexOf(x)>-1
+           }
+    
+      var newArr=this.props.wordsArray.filter(ff);
+      console.log (newArr.map(v=>"элемент "+v.code+" "+v.text))
+      this.setState( {listArray:newArr},gg() );
 
-
-   makeArray: function(arrr){
-    console.log(arrr)
-    wordsArray=arrr
+      function gg(){ console.log (listArray.map(v=>'элемент'+ v.text))}
+    
 
 return;
    },
@@ -27,8 +42,7 @@ return;
           return React.DOM.div( {className:'SelectionBuld'}, 
             React.DOM.div( {className:'WordText'}, this.props.word ),
             React.DOM.input( {type:"checkbox"} ),
-            React.createElement(InputTextBuild, {wordsArray:this.props.wordsArray,cbNewText:this.makeArray} ),
-            //React.DOM.input( {type:"text",defaultValue:"Введите текст", onChange:this.textChanged} ),
+            React.DOM.input( {type:"text",defaultValue:"Введите текст", onChange:this.inputTextChanged} ),
             React.DOM.input( {value:'сброс',type:"button",onClick: this.makeDefault}),
             React.DOM.div({className:'SelBul'},
                React.DOM.select( {className:'WordArr',size:this.props.selectSize}, wordsSelection ),),
