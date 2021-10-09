@@ -13,7 +13,7 @@ var SelectionBuild = React.createClass({
       getInitialState: function() {
         return { 
                listArray:this.props.wordsArray,
-               countClick:0,
+               notChangedArr:this.props.wordsArray
                }
       },
 
@@ -30,21 +30,26 @@ var SelectionBuild = React.createClass({
       var newArr=this.props.wordsArray.filter(ff);
       console.log (newArr.map(v=>"элемент "+v.code+" "+v.text))
       this.setState( {listArray:newArr},gg() );
-
-      function gg(){ console.log ('reкуку')}
+      this.setState( {notChangedArr:newArr},gg() );
+      function gg(){ console.log (' ку-ку')}
     
       
 return;
    },
    checkBoxChecked:function(EO){
-    console.log("нажата ли сейчас кнопка ", EO.target.value );
+    console.log(EO.target.checked)
       function compareWords(a,b){
-       if (a.text<b.text) return -1;
-       if (a.text>b.text) return 1;
-       return 0;
-     }
-     //this.setState({listArray:this.setState.listArray.sort()});
-    console.log('aga', this.state.listArray.sort(compareWords), 'countClick=',this.setState.countClick)
+      if (a.text<b.text) return -1;
+      if (a.text>b.text) return 1;
+      return 0;
+    };
+    if (EO.target.checked==true ){
+    
+    console.log('aga', this.state.listArray.sort(compareWords),)
+    }
+    else {console.log('neaga', this.state.notChangedArr);
+      this.setState.listArray=this.state.notChangedArr;
+    console.log('neaga', this.state.notChangedArr);}
   },
     render: function() {
  
