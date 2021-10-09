@@ -36,10 +36,9 @@ var SelectionBuild = React.createClass({
       
 return;
    },
-   checkBoxChecked:function(){
-
-    this.setState( (prevState, props) => { return {countClick:prevState.countClick+1}; } );
-     function compareWords(a,b){
+   checkBoxChecked:function(EO){
+    console.log("нажата ли сейчас кнопка ", EO.target.value );
+      function compareWords(a,b){
        if (a.text<b.text) return -1;
        if (a.text>b.text) return 1;
        return 0;
