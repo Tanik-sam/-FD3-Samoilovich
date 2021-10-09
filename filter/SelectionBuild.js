@@ -59,7 +59,7 @@ return;
             );
           return React.DOM.div( {className:'SelectionBuld'}, 
             React.DOM.div( {className:'WordText'}, this.props.word ),
-            React.DOM.input( {type:"checkbox", defaultChecked:false, onChange: this.checkBoxChecked} ),
+            React.DOM.input( {type:"checkbox", defaultChecked:false, onClick: this.checkBoxChecked} ),
             React.DOM.input( {type:"text",defaultValue:"Введите текст", onChange:this.inputTextChanged} ),
             React.DOM.input( {value:'сброс',type:"button",onClick: this.makeDefault}),
             React.DOM.div({className:'SelBul'},
