@@ -7,12 +7,11 @@ var SelectionBuild = React.createClass({
       wordsArray: React.PropTypes.array.isRequired,
     },
     makeDefault: function(){
-      var makeReset=12;
-      console.log (makeReset);
+      this.setState((prevState,props)=>{return {listArray: this.props.wordsArray};})
       },
       getInitialState: function() {
         return { 
-               listArray:this.props.wordsArray,
+               listArray:this.props.wordsArray.slice(),
                notChangedArr:this.props.wordsArray.slice()
                }
       },
@@ -29,27 +28,25 @@ var SelectionBuild = React.createClass({
     
       var newArr=this.props.wordsArray.filter(ff);
       console.log (newArr.map(v=>"элемент "+v.code+" "+v.text))
-      this.setState( {listArray:newArr},gg() );
-      this.setState( {notChangedArr:newArr},gg() );
-      function gg(){ console.log (' ку-ку')}
+      this.setState( {listArray:newArr} );
+      this.setState( {notChangedArr:newArr.slice()})
     
       
 return;
    },
    checkBoxChecked:function(EO){
-    console.log(EO.target.checked)
       function compareWords(a,b){
       if (a.text<b.text) return -1;
       if (a.text>b.text) return 1;
       return 0;
     };
     if (EO.target.checked==true ){
-      this.state.listArray.sort(compareWords); - это не меняет сам список в браузере
-      //this.setState.listArray((prevState,props)=>{return {listArray: this.state.listArray.sort(compareWords)};})// - а это не хочет работать
-    console.log('aga', this.state.listArray) //- хотя здесь все норм
+
+      this.setState((prevState,props)=>{return {listArray: prevState.listArray.sort(compareWords)};});
+    console.log('aga', this.state.listArray) 
     }
-    else {console.log('neaga', this.state.notChangedArr);
-      this.setState.listArray((prevState,props)=>{return {listArray: this.state.notChangedArr};})// а это вроде работает, во всяком случае ошибки не выдает.
+    else {
+      this.setState((prevState,props)=>{return {listArray: this.state.notChangedArr};})
     console.log('neaga', this.state.listArray);}
   },
     render: function() {
@@ -60,7 +57,7 @@ return;
             );
           return React.DOM.div( {className:'SelectionBuld'}, 
             React.DOM.div( {className:'WordText'}, this.props.word ),
-            React.DOM.input( {type:"checkbox", defaultChecked:false, onClick: this.checkBoxChecked} ),
+            React.DOM.input( {type:"checkbox", defaultChecked:false, onChange: this.checkBoxChecked} ),
             React.DOM.input( {type:"text",defaultValue:"Введите текст", onChange:this.inputTextChanged} ),
             React.DOM.input( {value:'сброс',type:"button",onClick: this.makeDefault}),
             React.DOM.div({className:'SelBul'},
