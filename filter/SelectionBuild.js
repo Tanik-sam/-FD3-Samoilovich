@@ -44,11 +44,12 @@ return;
       return 0;
     };
     if (EO.target.checked==true ){
-    
-    console.log('aga', this.state.listArray.sort(compareWords),)
+      this.state.listArray.sort(compareWords); - это не меняет сам список в браузере
+      //this.setState.listArray((prevState,props)=>{return {listArray: this.state.listArray.sort(compareWords)};})// - а это не хочет работать
+    console.log('aga', this.state.listArray) //- хотя здесь все норм
     }
     else {console.log('neaga', this.state.notChangedArr);
-      this.setState.listArray((prevState,props)=>{return {listArray: this.state.notChangedArr};})
+      this.setState.listArray((prevState,props)=>{return {listArray: this.state.notChangedArr};})// а это вроде работает, во всяком случае ошибки не выдает.
     console.log('neaga', this.state.listArray);}
   },
     render: function() {
