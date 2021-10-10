@@ -13,7 +13,7 @@ var SelectionBuild = React.createClass({
       getInitialState: function() {
         return { 
                listArray:this.props.wordsArray,
-               notChangedArr:this.props.wordsArray
+               notChangedArr:this.props.wordsArray.slice()
                }
       },
 
@@ -48,8 +48,8 @@ return;
     console.log('aga', this.state.listArray.sort(compareWords),)
     }
     else {console.log('neaga', this.state.notChangedArr);
-      this.setState.listArray=this.state.notChangedArr;
-    console.log('neaga', this.state.notChangedArr);}
+      this.setState.listArray((prevState,props)=>{return {listArray: this.state.notChangedArr};})
+    console.log('neaga', this.state.listArray);}
   },
     render: function() {
  
