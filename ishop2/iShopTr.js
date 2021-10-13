@@ -2,16 +2,21 @@
 
   displayName: 'iShopTr',
 
-  deleteRow: function(stringNumber){
-    console.log("ты меня нажал", "я", stringNumber);
+
+
+ // selectedGoodClicked: function(eo){
+   // this.setState((prevState,props)=>{return{selectedGoodId: 1};}); 
+   // console.log(this.props.selectedGoodId)
+ // },
+  deleteRow: function(eo){
+    
+    console.log("ты меня нажал", "я", this.props.codeValue);
   },
 
   render: function() {
-
-    var rowGood=this.props.rowG;
-    console.log(this.props.rowNumber);
+    
    
-    return React.DOM.tr({key:this.props.codeGood,className:'Row'},
+    return React.DOM.tr({key:this.props.codeGood,className:'Row',  onClick:this.props.cbselectedGood, id:this.props.selectedGoodId}, 
            React.DOM.td({className:'RowN'},this.props.nameGood),
            React.DOM.td({className:'RowN'},this.props.priceGood),
            React.DOM.td({className:'RowN'},
@@ -19,8 +24,8 @@
            ),
            React.DOM.td({className:'RowN'},this.props.quantityGood),
            React.DOM.td({className:'RowN'},
-           React.DOM.input( {type:'button',value:'delete',onClick:this.deleteRow(this.props.codeGood)} ), ),
-           )
+           React.DOM.input( {type:'button',value:'delete',onClick:this.deleteRow} ), ),)
+           
          
   },
 

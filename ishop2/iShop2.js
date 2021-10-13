@@ -2,6 +2,17 @@
 
   displayName: 'iShop2',
 
+  getInitialState: function() {
+    return { 
+      selectedGoodId: 0,
+       
+    };
+  },
+ 
+   selectedGood: function(){
+    this.setState( {selectedGoodId: 1} ); 
+    console.log(this.selectedGoodId)
+  },
 
 
   render: function() {
@@ -14,8 +25,10 @@
     }
      
      var stringSelect=this.props.rowG.map( v =>
-     React.createElement(iShopTr, {key:v.codeGood,
-        nameGood:v.nameGood, priceGood:v.priceGood, urlGood:v.urlGood, quantityGood:v.quantityGood})
+     React.createElement(iShopTr, {key:v.codeGood,codeValue:v.codeGood,
+        nameGood:v.nameGood, priceGood:v.priceGood, urlGood:v.urlGood, quantityGood:v.quantityGood, 
+        selectedGoodId:this.selectedGoodId,
+        cbselectedGood:this.selectedGood,})
         )
     
 
