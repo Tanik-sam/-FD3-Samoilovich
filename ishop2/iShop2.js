@@ -10,8 +10,8 @@
   },
  
    selectedGood: function(){
-    this.setState( {selectedGoodId: 1} ); 
-    console.log(this.selectedGoodId)
+    this.setState((prevState, props)=> ({selectedGoodId: 1} )); 
+    console.log(this.state.selectedGoodId)
   },
 
 
@@ -27,7 +27,7 @@
      var stringSelect=this.props.rowG.map( v =>
      React.createElement(iShopTr, {key:v.codeGood,codeValue:v.codeGood,
         nameGood:v.nameGood, priceGood:v.priceGood, urlGood:v.urlGood, quantityGood:v.quantityGood, 
-        selectedGoodId:this.selectedGoodId,
+        selectedGoodId:this.state.selectedGoodId,
         cbselectedGood:this.selectedGood,})
         )
     
