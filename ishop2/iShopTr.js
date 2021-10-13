@@ -4,19 +4,22 @@
 
 
 
- // selectedGoodClicked: function(eo){
-   // this.setState((prevState,props)=>{return{selectedGoodId: 1};}); 
-   // console.log(this.props.selectedGoodId)
- // },
+  selectedGoodClicked: function(eo){
+  this.props.cbselectedGood(this.props.codeValue);
+  console.log("сработал selectedGoodClicked", this.props.codeValue);
+  },
   deleteRow: function(eo){
-    
+    eo.stopPropagation();
     console.log("ты меня нажал", "я", this.props.codeValue);
+    this.props.cbdeleteGood(this.props.codeValue);
   },
 
   render: function() {
-    
+    var classGoodName="iShopTr"
+    if (this.props.selectedGoodId==this.props.codeValue) {classGoodName="iShopTrRed"} else classGoodName="iShopTr"
+    console.log(classGoodName)
    
-    return React.DOM.tr({key:this.props.codeGood,className:'Row',  onClick:this.props.cbselectedGood, id:this.props.selectedGoodId}, 
+    return React.DOM.tr({key:this.props.codeGood,className:classGoodName,  onClick:this.selectedGoodClicked }, 
            React.DOM.td({className:'RowN'},this.props.nameGood),
            React.DOM.td({className:'RowN'},this.props.priceGood),
            React.DOM.td({className:'RowN'},

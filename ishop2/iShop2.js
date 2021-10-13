@@ -4,16 +4,20 @@
 
   getInitialState: function() {
     return { 
-      selectedGoodId: 0,
+      selectedGoodId: 23,
        
     };
   },
  
-   selectedGood: function(){
-    this.setState((prevState, props)=> ({selectedGoodId: 1} )); 
-    console.log(this.state.selectedGoodId)
+   selectedGood: function(cdVl){
+    this.setState((prevState, props)=> ({selectedGoodId: cdVl} )); 
+    console.log("this.state.selectedGoodId=",this.state.selectedGoodId,)
   },
-
+  deleteGood: function(delCdVl){
+    this.props.rowG.splice(delCdVl,1)
+    
+    
+  },
 
   render: function() {
     var b=1;
@@ -28,7 +32,8 @@
      React.createElement(iShopTr, {key:v.codeGood,codeValue:v.codeGood,
         nameGood:v.nameGood, priceGood:v.priceGood, urlGood:v.urlGood, quantityGood:v.quantityGood, 
         selectedGoodId:this.state.selectedGoodId,
-        cbselectedGood:this.selectedGood,})
+        cbselectedGood:this.selectedGood,
+        cbdeleteGood:this.deleteGood})
         )
     
 
