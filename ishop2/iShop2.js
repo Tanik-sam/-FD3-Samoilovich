@@ -17,7 +17,7 @@
   deleteGood: function(delCdVl){
     if (delCdVl==0 && this.state.rowG2.length==1){ console.log(' а я остался один')} 
 this.state.rowG2.splice(delCdVl,1)
-    this.setState((prevState, props)=>({rowG2:this.state.rowG2}))
+    this.setState({rowG2:this.state.rowG2})
     console.log(this.state.rowG2)
     console.log("длина",this.state.rowG2.length)
      
