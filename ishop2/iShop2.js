@@ -5,16 +5,21 @@
   getInitialState: function() {
     return { 
       selectedGoodId: 23,
+      rowG2: this.props.rowG.slice()
        
     };
   },
  
    selectedGood: function(cdVl){
-    this.setState((prevState, props)=> ({selectedGoodId: cdVl} )); 
+    this.setState({selectedGoodId: cdVl} ); 
     console.log("this.state.selectedGoodId=",this.state.selectedGoodId,)
   },
   deleteGood: function(delCdVl){
-    this.props.rowG.splice(delCdVl,1)
+this.state.rowG2.splice(delCdVl,1)
+    this.setState((prevState, props)=>({rowG2:this.state.rowG2}))
+    console.log(this.state.rowG2)
+    console.log(this.props.rowG)
+     
     
     
   },
@@ -28,7 +33,7 @@
       cG.push(cGs);
     }
      
-     var stringSelect=this.props.rowG.map( v =>
+     var stringSelect=this.state.rowG2.map( v =>
      React.createElement(iShopTr, {key:v.codeGood,codeValue:v.codeGood,
         nameGood:v.nameGood, priceGood:v.priceGood, urlGood:v.urlGood, quantityGood:v.quantityGood, 
         selectedGoodId:this.state.selectedGoodId,
