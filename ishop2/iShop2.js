@@ -11,12 +11,14 @@
   },
  
    selectedGood: function(cdVl){
+     
     this.setState({selectedGoodId: cdVl} ); 
     console.log("this.state.selectedGoodId=",this.state.selectedGoodId,)
   },
   deleteGood: function(delCdVl){
-    var k=this.state.rowG2.slice()
-    k.splice(delCdVl,1);
+    function fff(v,i,a){return v.codeGood!=delCdVl}
+    var k=this.state.rowG2.filter(fff);
+    
      this.setState({rowG2:k})
     console.log(this.state.rowG2)
     console.log("длина",this.state.rowG2.length)
