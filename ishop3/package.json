@@ -1,8 +1,8 @@
 {
-  "name": "votesblock",
+  "name": "ishop3",
   "version": "1.0.0",
-  "description": "блок голосования",
-  "main": "App.js",
+  "description": "магазин",
+  "main": "InitialIshop.js",
   "scripts": {
     "build": ".\\node_modules\\.bin\\webpack",
     "start": ".\\node_modules\\.bin\\lite-server"

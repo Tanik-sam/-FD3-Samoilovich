@@ -1,22 +1,26 @@
-﻿var iShopTr = React.createClass({
+﻿import React from 'react';
+import PropTypes from 'prop-types';
 
-  displayName: 'iShopTr',
+import './iShopTr3.css';
 
+class iShopTr3 extends React.Component {
 
-
-  selectedGoodClicked: function(eo){
+  answerClicked = (EO) => {
+    this.props.cbSelected(this.props.code);
+  }
+  selectedGoodClicked=(eo)=>{
   this.props.cbselectedGood(this.props.codeValue);
   console.log("сработал selectedGoodClicked", this.props.codeValue);
-  },
-  deleteRow: function(eo){
+  }
+  deleteRow=(eo)=>{
     eo.stopPropagation();
     console.log("ты меня нажал", "я", this.props.codeValue);
     this.props.cbdeleteGood(this.props.codeValue);
-  },
+  }
 
-  render: function() {
-    var classGoodName="iShopTr"
-    if (this.props.selectedGoodId==this.props.codeValue) {classGoodName="iShopTrRed"} else classGoodName="iShopTr"
+  render() {
+    var classGoodName="iShopTr3"
+    if (this.props.selectedGoodId==this.props.codeValue) {classGoodName="iShopTrRed"} else classGoodName="iShopTr3"
     console.log(classGoodName)
    
     return React.DOM.tr({key:this.props.codeGood,className:classGoodName,  onClick:this.selectedGoodClicked }, 
@@ -30,6 +34,7 @@
            React.DOM.input( {type:'button',value:'delete',onClick:this.deleteRow} ), ),)
            
          
-  },
+  }
+}
 
-})
+  export default iShopTr3;
