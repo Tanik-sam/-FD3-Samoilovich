@@ -1,11 +1,11 @@
 ﻿import React from 'react';
 import PropTypes from 'prop-types';
 
-import './iShop3.css';
+import './IShop3.css';
 
-import iShopTr3 from './iShopTr3';
+import IShopTr3 from './IShopTr3';
  
-class iShop3 extends React.Component {
+class IShop3 extends React.Component {
 
   static propTypes = {
     
@@ -45,7 +45,7 @@ class iShop3 extends React.Component {
       cG.push(cGs);
     }
     var stringSelect=this.state.rowG2.map( v =>
-      <iShopTr3 key={v.codeGood} codeValue={v.codeGood}
+      <IShopTr3 key={v.codeGood} codeValue={v.codeGood}
         nameGood={v.nameGood} priceGood={v.priceGood} urlGood={v.urlGood} quantityGood={v.quantityGood} 
         selectedGoodId={this.state.selectedGoodId}
         cbselectedGood={this.selectedGood}
@@ -53,7 +53,7 @@ class iShop3 extends React.Component {
       />)
         
       return (
-        <div  className='iShop3'>
+        <div  className='IShop3'>
       <table className='tableIshop'> 
       <caption className='MarketName'>{this.props.marketName}</caption>
         <tbody className='tableBody'> 
@@ -68,5 +68,5 @@ class iShop3 extends React.Component {
 
 }
 
-export default iShop3;
+export default IShop3;
 

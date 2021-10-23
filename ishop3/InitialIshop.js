@@ -3,7 +3,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import iShop3 from './components/iShop3';
+import IShop3 from './components/IShop3';
 
 let marketNameText='Яблыка на талерке';
 let goods=require('./goods.json');
@@ -15,7 +15,7 @@ let columnGoods=[
   ];
 
 ReactDOM.render(
-  <iShop3 
+  <IShop3 
   marketName={marketNameText}
   rowG={goods}
   columnG={columnGoods}

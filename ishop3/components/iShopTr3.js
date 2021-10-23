@@ -1,9 +1,9 @@
 ﻿import React from 'react';
 import PropTypes from 'prop-types';
 
-import './iShopTr3.css';
+import './IShopTr3.css';
 
-class iShopTr3 extends React.Component {
+class IShopTr3 extends React.Component {
 
   answerClicked = (EO) => {
     this.props.cbSelected(this.props.code);
@@ -19,8 +19,8 @@ class iShopTr3 extends React.Component {
   }
 
   render() {
-    var classGoodName="iShopTr3"
-    if (this.props.selectedGoodId==this.props.codeValue) {classGoodName="iShopTrRed"} else classGoodName="iShopTr3"
+    var classGoodName="IShopTr3"
+    if (this.props.selectedGoodId==this.props.codeValue) {classGoodName="IShopTrRed"} else classGoodName="IShopTr3"
     console.log(classGoodName)
    
     return React.DOM.tr({key:this.props.codeGood,className:classGoodName,  onClick:this.selectedGoodClicked }, 
@@ -37,4 +37,4 @@ class iShopTr3 extends React.Component {
   }
 }
 
-  export default iShopTr3;
+  export default IShopTr3;
