@@ -22,18 +22,20 @@ class IShopTr3 extends React.Component {
     var classGoodName="IShopTr3"
     if (this.props.selectedGoodId==this.props.codeValue) {classGoodName="IShopTrRed"} else classGoodName="IShopTr3"
     console.log(classGoodName)
-   
-    return React.DOM.tr({key:this.props.codeGood,className:classGoodName,  onClick:this.selectedGoodClicked }, 
-           React.DOM.td({className:'RowN'},this.props.nameGood),
-           React.DOM.td({className:'RowN'},this.props.priceGood),
-           React.DOM.td({className:'RowN'},
-           React.DOM.img({className:'Img', src: this.props.urlGood, width:150, height:150}),
-           ),
-           React.DOM.td({className:'RowN'},this.props.quantityGood),
-           React.DOM.td({className:'RowN'},
-           React.DOM.input( {type:'button',value:'delete',onClick:this.deleteRow} ), ),)
-           
-         
+
+
+    return (
+      <Fragment  className='classGoodName' key={this.props.codeGood} onClick={this.selectedGoodClicked }>
+
+      <td className='RowN'>{this.props.priceGood}</td>
+      <td className='RowN'>
+        <img className='Img' src={this.props.urlGood} width={150} height={150}/> 
+      </td>
+      <td className='RowN'>{this.props.quantityGood}</td>
+      <td className='RowN'><input type='button' value='delete' onClick={this.deleteRow}/>
+      </td>   
+      </Fragment>
+    )        
   }
 }
 

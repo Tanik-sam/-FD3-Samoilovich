@@ -1,4 +1,4 @@
-﻿import React from 'react';
+﻿import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
 
 import './IShop3.css';
@@ -58,7 +58,7 @@ class IShop3 extends React.Component {
       <caption className='MarketName'>{this.props.marketName}</caption>
         <tbody className='tableBody'> 
         <tr className='ColumnName'>{cG} </tr> 
-         stringSelect,
+        <tr className='classGoodName'>{stringSelect}</tr>
                   ),
                   </tbody>
                   </table>

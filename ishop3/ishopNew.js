@@ -21300,7 +21300,12 @@ var IShop3 = function (_React$Component) {
               cG,
               ' '
             ),
-            'stringSelect, ),'
+            _react2.default.createElement(
+              'tr',
+              { className: 'classGoodName' },
+              stringSelect
+            ),
+            '),'
           )
         )
       );
@@ -21390,7 +21395,30 @@ var IShopTr3 = function (_React$Component) {
       } else classGoodName = "IShopTr3";
       console.log(classGoodName);
 
-      return _react2.default.DOM.tr({ key: this.props.codeGood, className: classGoodName, onClick: this.selectedGoodClicked }, _react2.default.DOM.td({ className: 'RowN' }, this.props.nameGood), _react2.default.DOM.td({ className: 'RowN' }, this.props.priceGood), _react2.default.DOM.td({ className: 'RowN' }, _react2.default.DOM.img({ className: 'Img', src: this.props.urlGood, width: 150, height: 150 })), _react2.default.DOM.td({ className: 'RowN' }, this.props.quantityGood), _react2.default.DOM.td({ className: 'RowN' }, _react2.default.DOM.input({ type: 'button', value: 'delete', onClick: this.deleteRow })));
+      return _react2.default.createElement(
+        'tr',
+        { className: 'classGoodName', key: this.props.codeGood, onClick: this.selectedGoodClicked },
+        _react2.default.createElement(
+          'td',
+          { className: 'RowN' },
+          this.props.priceGood
+        ),
+        _react2.default.createElement(
+          'td',
+          { className: 'RowN' },
+          _react2.default.createElement('img', { className: 'Img', src: this.props.urlGood, width: 150, height: 150 })
+        ),
+        _react2.default.createElement(
+          'td',
+          { className: 'RowN' },
+          this.props.quantityGood
+        ),
+        _react2.default.createElement(
+          'td',
+          { className: 'RowN' },
+          _react2.default.createElement('input', { type: 'button', value: 'delete', onClick: this.deleteRow })
+        )
+      );
     }
   }]);
 
