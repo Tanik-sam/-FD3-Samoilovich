@@ -1002,9 +1002,9 @@ var _reactDom = __webpack_require__(19);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _iShop = __webpack_require__(32);
+var _IShop = __webpack_require__(32);
 
-var _iShop2 = _interopRequireDefault(_iShop);
+var _IShop2 = _interopRequireDefault(_IShop);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1012,7 +1012,7 @@ var marketNameText = 'Яблыка на талерке';
 var goods = __webpack_require__(36);
 var columnGoods = [{ text: 'название', code: 1 }, { text: 'цена', code: 2 }, { text: 'URL фото', code: 3 }, { text: 'единиц на складе', code: 4 }];
 
-_reactDom2.default.render(_react2.default.createElement('iShop3', {
+_reactDom2.default.render(_react2.default.createElement(_IShop2.default, {
   marketName: marketNameText,
   rowG: goods,
   columnG: columnGoods,
@@ -21206,9 +21206,9 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 
 __webpack_require__(33);
 
-var _iShopTr = __webpack_require__(34);
+var _IShopTr = __webpack_require__(34);
 
-var _iShopTr2 = _interopRequireDefault(_iShopTr);
+var _IShopTr2 = _interopRequireDefault(_IShopTr);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -21218,21 +21218,21 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var iShop3 = function (_React$Component) {
-  _inherits(iShop3, _React$Component);
+var IShop3 = function (_React$Component) {
+  _inherits(IShop3, _React$Component);
 
-  function iShop3() {
+  function IShop3() {
     var _ref;
 
     var _temp, _this, _ret;
 
-    _classCallCheck(this, iShop3);
+    _classCallCheck(this, IShop3);
 
     for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = iShop3.__proto__ || Object.getPrototypeOf(iShop3)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = IShop3.__proto__ || Object.getPrototypeOf(IShop3)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
 
       selectedGoodId: 23,
       rowG2: _this.props.rowG.slice()
@@ -21253,7 +21253,7 @@ var iShop3 = function (_React$Component) {
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
-  _createClass(iShop3, [{
+  _createClass(IShop3, [{
     key: 'render',
     value: function render() {
       var _this2 = this;
@@ -21262,7 +21262,7 @@ var iShop3 = function (_React$Component) {
       var cG = [];
       for (var a = 0; a < this.props.columnG.length; a++) {
         var columnGood = this.props.columnG[a];
-        _react2.default.createElement(
+        var cGs = _react2.default.createElement(
           'th',
           { key: 'columnGood.code', className: 'ColumnN' },
           '  ',
@@ -21272,7 +21272,7 @@ var iShop3 = function (_React$Component) {
         cG.push(cGs);
       }
       var stringSelect = this.state.rowG2.map(function (v) {
-        return _react2.default.createElement('iShopTr3', { key: v.codeGood, codeValue: v.codeGood,
+        return _react2.default.createElement(_IShopTr2.default, { key: v.codeGood, codeValue: v.codeGood,
           nameGood: v.nameGood, priceGood: v.priceGood, urlGood: v.urlGood, quantityGood: v.quantityGood,
           selectedGoodId: _this2.state.selectedGoodId,
           cbselectedGood: _this2.selectedGood,
@@ -21282,7 +21282,7 @@ var iShop3 = function (_React$Component) {
 
       return _react2.default.createElement(
         'div',
-        { className: 'iShop3' },
+        { className: 'IShop3' },
         _react2.default.createElement(
           'table',
           { className: 'tableIshop' },
@@ -21307,16 +21307,16 @@ var iShop3 = function (_React$Component) {
     }
   }]);
 
-  return iShop3;
+  return IShop3;
 }(_react2.default.Component);
 
-iShop3.propTypes = {
+IShop3.propTypes = {
 
   marketName: _propTypes2.default.string.isRequired,
   rowG: _propTypes2.default.array.isRequired,
   columnG: _propTypes2.default.array.isRequired
 };
-exports.default = iShop3;
+exports.default = IShop3;
 
 /***/ }),
 /* 33 */
@@ -21355,21 +21355,21 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var iShopTr3 = function (_React$Component) {
-  _inherits(iShopTr3, _React$Component);
+var IShopTr3 = function (_React$Component) {
+  _inherits(IShopTr3, _React$Component);
 
-  function iShopTr3() {
+  function IShopTr3() {
     var _ref;
 
     var _temp, _this, _ret;
 
-    _classCallCheck(this, iShopTr3);
+    _classCallCheck(this, IShopTr3);
 
     for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = iShopTr3.__proto__ || Object.getPrototypeOf(iShopTr3)).call.apply(_ref, [this].concat(args))), _this), _this.answerClicked = function (EO) {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = IShopTr3.__proto__ || Object.getPrototypeOf(IShopTr3)).call.apply(_ref, [this].concat(args))), _this), _this.answerClicked = function (EO) {
       _this.props.cbSelected(_this.props.code);
     }, _this.selectedGoodClicked = function (eo) {
       _this.props.cbselectedGood(_this.props.codeValue);
@@ -21381,23 +21381,23 @@ var iShopTr3 = function (_React$Component) {
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
-  _createClass(iShopTr3, [{
+  _createClass(IShopTr3, [{
     key: 'render',
     value: function render() {
-      var classGoodName = "iShopTr3";
+      var classGoodName = "IShopTr3";
       if (this.props.selectedGoodId == this.props.codeValue) {
-        classGoodName = "iShopTrRed";
-      } else classGoodName = "iShopTr3";
+        classGoodName = "IShopTrRed";
+      } else classGoodName = "IShopTr3";
       console.log(classGoodName);
 
       return _react2.default.DOM.tr({ key: this.props.codeGood, className: classGoodName, onClick: this.selectedGoodClicked }, _react2.default.DOM.td({ className: 'RowN' }, this.props.nameGood), _react2.default.DOM.td({ className: 'RowN' }, this.props.priceGood), _react2.default.DOM.td({ className: 'RowN' }, _react2.default.DOM.img({ className: 'Img', src: this.props.urlGood, width: 150, height: 150 })), _react2.default.DOM.td({ className: 'RowN' }, this.props.quantityGood), _react2.default.DOM.td({ className: 'RowN' }, _react2.default.DOM.input({ type: 'button', value: 'delete', onClick: this.deleteRow })));
     }
   }]);
 
-  return iShopTr3;
+  return IShopTr3;
 }(_react2.default.Component);
 
-exports.default = iShopTr3;
+exports.default = IShopTr3;
 
 /***/ }),
 /* 35 */

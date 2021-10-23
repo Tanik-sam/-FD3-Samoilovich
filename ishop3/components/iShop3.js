@@ -40,7 +40,7 @@ class IShop3 extends React.Component {
     var cG=[];
     for ( var a=0; a<this.props.columnG.length; a++ ) {
       var columnGood=this.props.columnG[a];
-      <th  key="columnGood.code" className='ColumnN'>  {columnGood.text}</th>
+      let cGs = <th  key="columnGood.code" className='ColumnN'>  {columnGood.text}</th>
       
       cG.push(cGs);
     }
