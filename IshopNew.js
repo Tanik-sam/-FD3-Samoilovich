@@ -21396,7 +21396,7 @@ var IShopTr3 = function (_React$Component) {
       console.log(classGoodName);
 
       return _react2.default.createElement(
-        'tr',
+        Fragment,
         { className: 'classGoodName', key: this.props.codeGood, onClick: this.selectedGoodClicked },
         _react2.default.createElement(
           'td',
